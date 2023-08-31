@@ -1,0 +1,781 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Fredoka+One&family=Noto+Serif+JP:wght@600;700&family=Orbitron&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Fredoka+One&family=Libre+Baskerville:wght@700&family=Noto+Serif+JP:wght@600;700&family=Orbitron&family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arimo:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ************************************************************navbar Section */
+header {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+.Services h1 {
+    margin-top: 100px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.nav_bar {
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    justify-content: space-between;
+    background-color: rgb(0 11 67);
+    overflow: hidden;
+    filter: drop-shadow(11px 7px 5px black);
+
+    top: 0;
+    width: 100%;
+    height: 87px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    font-family: 'Fredoka One', cursive;
+
+
+}
+
+#navbar a {
+    font-family: 'Fredoka One', cursive;
+}
+
+.navbar a:hover {
+    color: black;
+
+}
+
+a {
+    margin-left: -489px;
+    padding: 2px 50px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+.logo img {
+    height: 88px;
+    width: 90px;
+    margin: -42px -3px;
+    padding: 23px -17p;
+    margin-right: 21px;
+}
+
+.logo {
+    filter: invert(100%);
+
+}
+
+#myBtn {
+    justify-content: center;
+    padding: 10px 0px;
+    text-align: right;
+    border-radius: 10px;
+    /* background-color: rgb(43, 113, 150); */
+    margin: 23px;
+    font-size: 17px;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    display: flex;
+    align-content: center;
+    cursor: pointer;
+    width: 105px;
+    height: 38px;
+}
+
+/* now only for contact submi button  */
+.btn {
+    padding: 6px 26px;
+    text-align: right;
+    border-radius: 10px;
+    background-color: rgb(43, 113, 150);
+    margin: 23px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+
+
+}
+
+/********************************************************************************* Introduction section  */
+#introduction {
+    height: 580px;
+    width: 100%;
+    background: url("bg2.jpg") no-repeat center center/cover;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 2;
+}
+
+@media(min-aspect-ratio:16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-aspect-ratio:16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.Explore_page {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 150px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 154px;
+    color: white;
+    height: auto;
+}
+
+.expo {
+    padding-left: 425px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 34px;
+    margin: 23px;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#explo {
+    z-index: -1;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    border: 1px solid white;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 11 67);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+/************************************************************************************ Our Sevices  */
+
+
+.Services {
+    height: 190px;
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.content-service {
+    font-size: 20px;
+}
+
+.content-service p {
+    margin: 10px;
+    padding: 10px;
+    text-justify: auto;
+    font-size: 26px;
+    font-family: 'Noto Serif JP', serif;
+    z-index: 2;
+}
+
+.sevices_3 {
+    font-size: 20px;
+    display: flex;
+    padding-top: 123px;
+}
+
+
+#sevices_3_box {
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 34px;
+    padding: 47px;
+    filter: drop-shadow(15px 17px 8px black);
+    width: 30%;
+}
+
+.minibox_section {
+    height: 108px;
+    padding: -1px;
+    width: 202px;
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+    /* margin: -7px; */
+    margin-bottom: -23px;
+    flex-direction: column;
+
+}
+
+.minibox-1 {
+    /* border: 1px solid white; */
+    margin: 3px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    justify-content: center;
+}
+
+.minibox-1 img {
+    height: 16px;
+    width: 23px;
+    padding-right: -8px;
+
+}
+
+#sevices_3_box h1 {
+    font-size: 41px;
+    margin-top: -31px;
+}
+
+.glow-on-hover a {
+    margin-left: 2px;
+    margin: -2px;
+    font-size: 42px;
+    padding: 5px;
+}
+
+/******************************************************* Medicine Service section  */
+
+
+#start {
+    height: 820px;
+    background-color: cadetblue;
+}
+
+.Medicine {
+    background-image: linear-gradient(#eaf2f4, #aad7e9);
+
+    max-height: 421px;
+    display: flex;
+    overflow-x: auto;
+    border-radius: 10px;
+    padding-top: 32px;
+    margin: -4px 10px;
+
+}
+
+.Medicine::-webkit-scrollbar {
+    width: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.medicine_content {
+    /* border: 1px solid black; */
+    margin: 10px;
+    padding: 5px;
+    text-shadow: 1px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.boxes {
+    margin-top: 32px;
+    height: 399px;
+background-color: white;
+    border-radius: 30px;
+    padding: 34px;
+    margin: 29px 14px;
+
+}
+
+.medicine_content {
+    margin: 5px;
+    padding: 16px;
+}
+
+.para {
+    /* padding-bottom: 203px; */
+    width: 191px;
+
+    padding-left: -38px;
+    margin-top: 10px;
+
+}
+
+.inner-box img {
+    height: 110px;
+}
+
+.inner-box {
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    width: 183px;
+    margin: -5px -5px;
+    border: none;
+    height: 136px;
+}
+
+/**************************************************************************** Blood Bank Section  */
+
+
+.bb_page {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    flex-direction: column;
+
+}
+
+.bb_section {
+
+    width: 100%;
+    height: 847px;
+    color: red;
+
+    background-size: 100% 100%;
+    z-index: -1;
+    opacity: 2;
+}
+
+.bb_nav {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* margin-top: 192px; */
+    font-family: 'Noto Serif JP', serif;
+    font-size: 167px;
+    padding-left: 442px;
+    color: white;
+
+}
+
+.Sub-Tital {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.bb_page h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 111px;
+    margin-bottom: 50px;
+    font-family: 'Libre Baskerville', serif;
+    /* margin: 29px; */
+    font-size: 60px;
+}
+
+.bb h1 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* background-color: rgb(245, 83, 83); */
+}
+
+.image_section {
+    /* background-color: wheat; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* height: 200px; */
+    width: 90%;
+    margin: 48px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    padding: 25px;
+    height: 323px;
+}
+
+#images_1 img {
+    height: 280px;
+    width: 467px;
+
+
+}
+
+#images_2 img {
+    height: 280px;
+    width: 330px;
+}
+
+#images_3 img {
+    height: 280px;
+    width: 330px;
+}
+
+.Image_1 {
+    background-color: rgb(245, 238, 238);
+    margin: 10px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    height: 288px;
+    width: 60%;
+
+    justify-content: center;
+}
+
+.bb_Tital {
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    padding-right: 487px;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+
+.bb_btn {
+    padding: 6px 26px;
+
+    border-radius: 10px;
+    background-color: rgb(197, 64, 64);
+    /* margin: 23px; */
+    font-size: 15px;
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+
+
+}
+
+/* ***********************************************************Organ Donatin Section  */
+
+#organ-btn {
+    margin-top: 50px;
+}
+
+.Sub-Tital-organ {
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(245, 238, 238);
+}
+
+.Image_3 img {
+    height: 218px;
+    width: 376px;
+}
+
+.organ-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-2-explore {
+    height: 922px;
+
+    z-index: -1;
+}
+
+#services {
+    background-image: url(/static/img/medical-services-1.jpg);
+    background-size: 100% 100%;
+
+
+}
+
+.organ_section {
+    height: 748px;
+
+}
+
+.image_section_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 44px;
+    padding: 25px;
+    height: 200px;
+
+}
+
+.Sub-Tital-organ h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+.Sub-Tital-organ li {
+    margin: 10px;
+    padding: 10px;
+}
+
+.organ-content-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 10px;
+    color: pink;
+}
+
+
+
+/* *********************************************************************************About Us section  */
+
+
+.section-3-about_us {
+    height: 840px;
+
+}
+
+#about_service {
+
+    display: flex;
+}
+
+#about_service .info_in_servicebox {
+    margin: 5px;
+}
+
+#img_ID img {
+    height: 737px;
+    width: 681px;
+    margin: 22px;
+    padding: 33px;
+}
+
+.info_in_servicebox h1 {
+    padding: 34px;
+    /* margin: 33px; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: 55px;
+}
+
+.info_in_servicebox h3 {
+    padding: 23px;
+    margin: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-in-servicebox_innerbox img {
+    height: 60px;
+    width: 75px;
+    margin-right: 35px;
+}
+
+#info_ID {
+  
+    margin: 23px;
+
+    
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.content_about p {
+    display: flex;
+    text-align: start;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 17px;
+    padding-bottom: 0px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.info-in-servicebox_innerbox {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 23px;
+padding: 12px;
+    display: flex;
+    align-items: center;
+
+    font-family: 'Arimo', sans-serif;
+
+}
+
+
+
+
+/* ***********************************************************************************Contact Section  */
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 709px;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('/static/img/contact_bg.jpg') no-repeat center center/cover;
+
+}
+
+.center {
+    margin: 0px 59px;
+    margin-bottom: 49px;
+}
+
+#contact {
+    width: 100%;
+    height: 709px;
+}
+
+#contact-box form {
+    width: 80%;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact_us_id h1 {
+    margin-top: 43px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    border: 1px solid;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+
+}
+
+
+/*********************************************************************************** footer section  */
+footer {
+    height: 30px;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}

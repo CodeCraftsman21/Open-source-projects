@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widths=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/assets/images/blood-drop.svg">
+    <title>Blood Bank</title>
+    <!-- style and scripts links -->
+    <script src="scripts/main.js"></script>
+
+    <!-- external links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Fredoka+One&family=Libre+Baskerville:wght@700&family=Noto+Serif+JP:wght@600;700&family=Orbitron&family=Oswald:wght@500&display=swap');
+        body,
+        html {
+            height: 100%;
+        }
+
+        body {
+            background: linear-gradient(to right,#a18cd1, #fbc2eb , #a18cd1);
+
+        }
+
+        h1 {
+            margin-top: 15%;
+            text-align: center;
+            font-weight: bold;
+            color: red;
+            font-family: 'Carter One', cursive;
+        }
+
+        .homepage-img {
+            display: block;
+            text-align: center !important;
+        }
+        .front-name {
+            /* margin: 205px 286px; */
+            margin: 181px 219px;
+            /* margin: 205px 286px; */
+            position: absolute;
+            display:flex;
+            max-width: 100%;
+            padding: 20px 15px;
+            border-radius: 6px;
+            /* background-color:  #fbc2eb; */
+            color: black;
+            box-shadow: 0 1px 10px rgba(0, 0, 0, -1);
+            transform: translateY(50px);
+            opacity: 1;
+            visibility: visible;
+            animation: fade 15s linear;
+            font-size: 78px;
+            font-family: 'Libre Baskerville', serif;
+
+
+
+            /* font-family: 'Oswald', sans-serif; */
+
+
+
+        }
+
+        @keyframes fade {
+            5% {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0px);
+            }
+
+            90% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+            95% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+                /* transform: translateY(-30px); */
+
+            }
+
+        }
+
+        @keyframes progress {
+            to {
+                width: calc(100% -10px);
+            }
+        }
+
+        .progress {
+            position: absolute;
+            left: 5px;
+            bottom: 5px;
+            width: 0;
+            height: 3px;
+            background-image: linear-gradient(to right, #529bdb, #3250bf);
+            border-radius: 4px;
+            animation: progress 3s .50s linear forwards;
+        }
+
+        h1 {
+            margin-top: 15%;
+            text-align: center;
+            font-weight: bold;
+            color: red;
+            /* font-family: 'Carter One', cursive; */
+            /* font-family: 'Oswald', sans-serif; */
+            font-size: 68px;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            margin: 400px;
+        } 
+    </style>
+</head>
+
+<body>
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+    <nav class="navbar navbar-expand-xl navbar-light " style="background-color: #ffb5fd;">
+        <a class="navbar-brand" href="/views/bb.html">
+            <img src="/static/assets/images/navbar-blood-drop.svg" width="30" height="30" class="d-inline-block align-top"
+                alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="donateBlood">Donate</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="hospitalOrder">Order blood units</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="MCI">Multiple Casualty Incident</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle " type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" style="border:1px; background-color: #ff82fc;margin-right:50px;"
+                    aria-haspopup="true" aria-expanded="false">
+                    View tables
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="viewDonors">Donors</a>
+                    <a class="dropdown-item" href="viewHospitalUse">Hospital Orders</a>
+                    <a class="dropdown-item" href="viewBloodBank">Blood bank</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------------------------------------------------------------------------------------- -->
+    <div class="front-name">
+        <p>
+            Blood Bank by MedTech
+
+        </p>
+        <span class="progress"></span>
+    </div>
+    <div class="homepage-img">
+        <img src="/static/assets/images/donate-blood.png" class="img-fluid" alt="Responsive image">
+    </div>
+    
+
+
+</body>
+
+</html>

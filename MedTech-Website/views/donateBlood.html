@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title Page-->
+    <title>Donation form</title>
+
+    <!-- local link -->
+    <link href="/static/style/styles.css" rel="stylesheet" media="all">
+    <link rel="icon" href="/static/assets/images/blood-drop.svg">
+    <link rel="stylesheet" href="/static/style/success-modals.css">
+
+    <!-- local scripts -->
+    <script src="../static/scripts/main.js"></script>
+    <script src="../static/scripts/donor-page.js" defer></script>
+    <!-- Font special for pages-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <!-- Bootstrap,jQuery,popper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <style>
+        .btnclass{
+            border: 1px solid white;
+            color: white;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ---------------------------------------------------------------------------------------------- -->
+    <nav class="navbar navbar-expand-xl navbar-light " style="background-color: #ffb5fd;">
+        <a class="navbar-brand" href="/views/bb.html">
+            <img src="/static/assets/images/navbar-blood-drop.svg" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" style="font-weight: bold;">
+                    <a class="nav-link" href="donateBlood.html">Donate</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="hospitalOrder.html">Order blood units</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="MCI.html">Multiple Casualty Incident</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle " type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" style="border:1px; background-color: #ff82fc;margin-right:50px;"
+                    aria-haspopup="true" aria-expanded="false">
+                    View tables
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="viewDonors.html">Donors</a>
+                    <a class="dropdown-item" href="viewHospitalUse.html">Hospital Orders</a>
+                    <a class="dropdown-item" href="viewBloodBank.html">Blood bank</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <div class="page-wrapper font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Donating Blood</h2>
+                    <form action="/blood" method="post">
+                        <div class="row row-space">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <label class="label">ID</label>
+                                    <input class="input--style-4" name="id" type="text" id="donorID">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <label class="label">Full Name</label>
+                                    <input class="input--style-4" name="fullname" type="text" id="fullName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <label class="label">Phone</label>
+                                    <input class="input--style-4" name="phone" type="phone" id="phoneNumber">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <label class="label">Street</label>
+                                    <input class="input--style-4" name="street" type="text" id="streetInput">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <label class="label">City</label>
+                                    <input class="input--style-4" name="city" type="text" id="cityInput">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 blood-type-dropdown">
+                            <label class="label">Blood Type</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select class="custom-select" id="bloodTypeSelect" name="bloodtype">
+                                    <option disabled="disabled" selected="selected">Choose type</option>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+
+
+                        <button class="btnclass" >Submit</button>
+                        <!-- <button class="btn btn--pink" >Submit</button> -->
+
+                        <div class="p-t-15">
+                          
+                            <button class="btn btn--pink" type="button" onclick="addDonor(event)">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------- -->
+    <!-- /// success modal  -->
+
+    <div id="success-modal" class="modal fade" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                    <h4 class="modal-title w-100">Awesome!</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center" id="modal-paragraph"></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success btn-block" data-dismiss="modal" onclick="clearForm()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

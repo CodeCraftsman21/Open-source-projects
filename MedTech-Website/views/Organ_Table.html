@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title Page-->
+    <title>Orders table</title>
+    <!-- local links -->
+    <link href="/static/style/styles.css" rel="stylesheet" media="all">
+
+    <link rel="icon" href="/static/assets/images/icon_logo.png">
+    <link rel="stylesheet" href="/static/style/tables.css">
+    <script src="/static/scripts/organ_table.js"  defer> </script>
+
+    <!-- local scripts -->
+    <!-- <script src="/static/scripts/main.js"></script> -->
+    <!-- <script src="/static/scripts/orders-table.js"></script> -->
+    <!-- <link rel="script" href="/static/scripts/organ_table.js"> -->
+    <!-- Font special for pages-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- ---------------------------------------------------------------------------------------------- -->
+    <nav class="navbar navbar-expand-xl navbar-light " style="background-color: #ffb5fd;">
+        <a class="navbar-brand" href="Organ_Form.html">
+            <img src="/static/assets/images/organ_logo2.png" width="30" height="30" class="d-inline-block align-top"
+                alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" style="font-weight: bold;" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="Organ_Form.html">Donate</a>
+                </li>
+                <li class="nav-item " style="font-weight: bold;">
+                    <a class="nav-link" href="Hospital_req.html">request</a>
+                </li>
+
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle " type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" style="border:1px; background-color: #ff82fc;margin-right:50px;"
+                    aria-haspopup="true" aria-expanded="false">
+                    View tables
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <!-- <a class="dropdown-item" href="viewDonors.html">Donors</a>  -->
+                    <a class="dropdown-item" href="Organ_Table.html">Hospital Orders</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------------------------------------------------------------------------------------- -->
+    <div class="container-fluid">
+        <!-- <div class="row d-flex justify-content-center">
+            <div class="d-flex p-2 col-6 ">
+                <input class="form-control" id="search-input" type="search" placeholder="Search" aria-label="Search"
+                    onkeyup="searchTable()">
+            </div>
+        </div> -->
+        <div class="row d-flex justify-content-center">
+            <table id="data-table" class="table table-hover table-striped table-bordered col-6">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">
+                            patient id</th>
+                        <th scope="col">Full name</th>
+                        <th scope="col>">Unique Number</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Blood type</th>
+                        <th scope="col">Time stamp</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+
+<!-- // const tableBody = document.getElementById("table-body");
+    // function addRow(index, adhar, age, fullname, id, organ, timestamp) {
+    //     const tr = document.createElement("tr");
+    //     function addTd(value) {
+    //         const td = document.createElement("td");
+    //         td.innerHTML = value;
+    //         tr.appendChild(td);
+    //     }
+    //     addTd(index);
+    //     addTd(id),
+    //         addTd(fullname);
+    //     addTd(adhar);
+    //     addTd(age);
+    //     addTd(organ);
+    //     addTd(timestamp)
+    //     tableBody.appendChild(tr);
+
+
+    // }
+    // fetch("/hospital_data").then(async (data) => {
+    //     const jsonData = await data.json();
+    //     // console.log(jsonData);
+    //     jsonData.forEach((item, index) => {
+    //         addRow(index + 1, item.adhar, item.age, item.fullname, item.id, item.organ, item.createdAt);
+    //     })
+    // }).catch(err => { console.log("Error", err) }) -->
+
+
+</html>
+<!-- end document-->

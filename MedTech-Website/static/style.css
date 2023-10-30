@@ -89,7 +89,7 @@ a {
     margin: 23px;
     font-size: 17px;
     font-family: 'Fredoka One', cursive;
-    color: white;
+    color: rgb(247, 79, 79);
     display: flex;
     align-content: center;
     cursor: pointer;
@@ -102,10 +102,10 @@ a {
     padding: 6px 26px;
     text-align: right;
     border-radius: 10px;
-    background-color: rgb(43, 113, 150);
+    background-color: rgb(70, 167, 219);
     margin: 23px;
     font-size: 15px;
-    color: white;
+    color: rgb(25, 189, 201);
     font-family: 'Fredoka One', cursive;
     cursor: pointer;
 
@@ -154,7 +154,7 @@ a {
     margin: 150px;
     font-family: 'Noto Serif JP', serif;
     font-size: 154px;
-    color: white;
+    color: rgb(148, 13, 13);
     height: auto;
 }
 
